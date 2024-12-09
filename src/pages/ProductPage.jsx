@@ -27,7 +27,7 @@ const ProductPage = () => {
 
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <div className="container w-full h-full px-0 py-10 mx-auto lg:px-10">
         <HelmetComponent
           title={product?.title}
