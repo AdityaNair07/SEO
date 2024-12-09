@@ -21,7 +21,7 @@ const App = () => {
 
   return (
     <>
-      <HelmetComponent
+      {/* <HelmetComponent
         title={"Product Hunt"}
         desc={"Get detailed product information from variety of products"}
         image={
@@ -29,7 +29,7 @@ const App = () => {
         }
         url={"https://dummyjson.com/products"}
         type={"website"}
-      />
+      /> */}
       <Navbar />
       <div className="container w-full h-full px-0 py-10 mx-auto lg:px-10">
         <div className="grid grid-cols-1 gap-3 md:grid-cols-3 sm:grid-cols-2 lg:grid-cols-4">
