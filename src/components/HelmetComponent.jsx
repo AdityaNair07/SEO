@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import PropTypes from "prop-types";
 
-const HelmetComponent = ({ title, desc, image, url, type }) => {
+const HelmetComponent = ({ title, desc, image, type }) => {
   return (
     <>
       <Helmet>
@@ -15,7 +15,7 @@ const HelmetComponent = ({ title, desc, image, url, type }) => {
         />
         <meta property="og:image" content={image} data-react-helmet="true" />
         <meta property="og:type" content={type} />
-        <meta property="og:url" content={url} />
+        <meta property="og:url" content={window.location.href} />
       </Helmet>
     </>
   );
@@ -25,7 +25,6 @@ HelmetComponent.propTypes = {
   title: PropTypes.string.isRequired,
   desc: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
-  url: PropTypes.string,
   type: PropTypes.string,
 };
 

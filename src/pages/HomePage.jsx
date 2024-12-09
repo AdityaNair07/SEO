@@ -27,7 +27,6 @@ const HomePage = () => {
           image={
             "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
           }
-          url={`https://dummyjson.com/products`}
           type={"website"}
         />
         <div className="container w-full h-full px-0 py-10 mx-auto lg:px-10">
