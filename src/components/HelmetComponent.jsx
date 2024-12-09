@@ -1,27 +1,32 @@
 import { Helmet } from "react-helmet-async";
 import PropTypes from "prop-types";
 
-const HelmetComponent = ({ product }) => {
+const HelmetComponent = ({ title, desc, image, url, type }) => {
   return (
     <>
       <Helmet>
-        <title>{`${product?.title}`} - Buy Online</title>
-        <meta name="description" content={product?.description} />
-        <meta property="og:title" content={product?.title} />
-        <meta property="og:description" content={product?.description} />
-        <meta property="og:image" content={product?.images[0]} />
-        <meta property="og:type" content="website" />
+        <title>{`${title}`} - Buy Online</title>
+        <meta name="description" content={desc} data-react-helmet="true" />
+        <meta property="og:title" content={title} data-react-helmet="true" />
         <meta
-          property="og:url"
-          content={`https://dummyjson.com/products/${product?.id}`}
+          property="og:description"
+          content={desc}
+          data-react-helmet="true"
         />
+        <meta property="og:image" content={image} data-react-helmet="true" />
+        <meta property="og:type" content={type} />
+        <meta property="og:url" content={url} />
       </Helmet>
     </>
   );
 };
 
 HelmetComponent.propTypes = {
-  product: PropTypes.object.isRequired,
+  title: PropTypes.string.isRequired,
+  desc: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  url: PropTypes.string,
+  type: PropTypes.string,
 };
 
 export default HelmetComponent;

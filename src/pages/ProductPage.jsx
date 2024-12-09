@@ -29,7 +29,13 @@ const ProductPage = () => {
     <>
       <Navbar />
       <div className="container w-full h-full px-0 py-10 mx-auto lg:px-10">
-        <HelmetComponent product={product} />
+        <HelmetComponent
+          title={product?.title}
+          desc={product?.description}
+          image={product?.images[0]}
+          url={`https://dummyjson.com/products/${product?.id}`}
+          type={"website"}
+        />
         <div className="flex flex-col w-full h-full mt-10 md:flex-row">
           <div className="w-1/2">
             <img
